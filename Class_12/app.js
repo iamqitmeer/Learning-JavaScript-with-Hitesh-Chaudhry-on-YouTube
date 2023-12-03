@@ -102,7 +102,7 @@
 
 // Slice :-
 
-// Ham ne dekha ke ham Add OR remove krskte he Shuru ka index OR end ka index. agar hamEin Print krna ho. Array ke eik chote se part Ke. chahe wo jaha bhi  exist krTa ho. End me Center me Ya Start me. to Ham use kr skte he slice method ko. 
+// Ham ne dekha ke ham Add OR remove krskte he Shuru ka index OR end ka index. agar hamEin Print krna ho. Array ke eik chote se part Ke. chahe wo jaha bhi  exist krTa ho. End me Center me Ya Start me. to Ham use kr skte he slice method ko.
 
 // Sab se pehle Array ka naam ke sath .slice likh kr iske round bracket me ajayenge. or bracket me akar batana he ke Array ke konse index se shuru krna he e.g. 3 phir , lagake batana he ke konse index tk ki value chahiye e.g. 8. , Note agar hamne likha 8 to ye 8 tk nhi blke is se eik number pehle pr end krega. mtlb agar hamne likha muslimHeroes.slice(3,8) to ye 7 pr khtm krdega
 
@@ -130,7 +130,6 @@
 // Is example mein, `slice(1, 3)` se array ke index 1 se 3 tak ke elements include hote hain, lekin 3rd index ka element include nahi hota.
 
 // Is tareeke se, `slice()` method ka istemal array ke specific part ko alag karne aur naye array banane ke liye hota hai.
-
 
 // Splice :-
 
@@ -240,3 +239,105 @@ Ye method array ko modify karta hai aur modified array ko return karta hai.
 
 // Array part 2 in Javascript
 
+// Javascript me bohot saare Array ke method he. ab hamein maloom kese hoga ke ye method he javascript ka. to inspect Element me hamare Array ko log kr ke iska prorotype dekhenge to saaare method mil jayenge
+
+let ourMuslimHeroes = [
+  "Salahuddin Ayyubi",
+  "Malcolm X",
+  "Muhammad Ali",
+  "Ibn Battuta",
+  "Fatima al-Fihri",
+  "Ibn Sina (Avicenna)",
+  "Maryam Mirzakhani",
+  "Al-Farabi",
+  "Hakeem Olajuwon",
+];
+
+let moreMuslimHeroes = [
+  "Tariq ibn Ziyad",
+  "Nawal El Saadawi",
+  "Mansa Musa",
+  "Rumi",
+  "Shirin Ebadi",
+  "Imam Al-Ghazali",
+  "Khadija bint Khuwaylid",
+  "Al-Razi",
+  "Hamza Yusuf",
+  "Averroes (Ibn Rushd)",
+  "Ibn Khaldun",
+];
+
+// -----------------------------------------
+
+// Agar Hamein "ourMuslimHeroes" OR "moreMuslimHeroes" ko merge krna hoto hamein .concat use krna hoga lekin isko new arraya banake .concat krna hoga kyu ke ye new varieble return krta he
+
+// let newVar = ourMuslimHeroes.concat(moreMuslimHeroes);
+// console.log(newVar);
+
+// Isko Merge krne ka eik OR treeqa he.
+
+// -----------------------------------------
+// Spread Operator
+
+// JavaScript me Spread Operator (...) ek operator hai jo iterable objects ko expand karne aur unke elements ko individual items me convert karne me madad karta hai. Spread operator ka use arrays, objects, ya function calls me kiya ja sakta hai.
+
+// Spread ka matlan he cheezo ko spread krdeNa . e.g. Hamare paas kanch ka glass he agar me use neeche phenk doo to wo toot ke spread hojaye ga . means bikhar jayega. ye bhi new var return krta he
+
+// let newVar = [...moreMuslimHeroes,...ourMuslimHeroes]
+// console.log(newVar);
+
+// Ab .concat OR (...) Spread Operator me Farq ye he ke .concat sorf eik value ko doosri value ke sath concat krta he. lekin Spread Operator 1 value ko multiple value ke sath merge krdeTa he
+
+// -----------------------------------------
+
+let iCreateFaltuArray = [1, 2, 3,[4, 5], 6, [7,[8, 9], 7]];
+// Ab ye Array bohot rear He. isme Array ke andar Array he or usko ke andar bhi Array he. inCase agar hamare paas agaya to kya kare. iskeLiye bhi eik method he .flat . ye new array me kaam krta he
+
+let fall = iCreateFaltuArray.flat(Infinity)
+
+// Ham Jab ".flat()" to iske round bracket ke andar depth batani hoti he. ke kitne nested paaar krne he. agar ham chahte he ke ye saare nested paar kre to iske round bracket ke andar "Infinity" likh denge
+
+// -----------------------------------------
+
+// Agar ham kisi aray ko dhoond rahe he to hamein "console.log();" ke andar Array.isArray(is ke andar us array ka naam dena he) . agar ye array hoga to ye true de ga OTHERWISE false
+
+// console.log(Array.isArray(ourMuslimHeroes));
+
+// -----------------------------------------
+
+// Agar Ham Hamare Bataein Hue Word ke har har index ko Array me convert krwana chahte he to.
+
+// console.log(Array.from("Qitmeer Raza"));
+
+// Array.from(iske andar jo bhi denge wo iske index ko Array me convert krdega)
+
+// -----------------------------------------
+
+// `Array.of` ek JavaScript method hai jo ek ya multiple values ko ek array mein convert karta hai. Is method ka main uddeshya ek naya array banane ka hai, jismein diye gaye values hote hain.
+
+// Jab aap `Array.of` ka istemal karte hain, to ye ek naya array banata hai aur usmein diye gaye values ko elements ke roop mein rakhta hai. Yeh method especially tab kaam aata hai jab aap sure hona chahte hain ki aapka output hamesha ek array hi hoga, chahe aap kitni bhi values provide kyun na karein.
+
+// Yaha ek chhota sa example hai:
+
+// ```javascript
+// let arr1 = Array.of(1, 2, 3, 4, 5);
+// console.log(arr1); // Output: [1, 2, 3, 4, 5]
+
+// let arr2 = Array.of("a", "b", "c");
+// console.log(arr2); // Output: ["a", "b", "c"]
+
+// let arr3 = Array.of(7);
+// console.log(arr3); // Output: [7]
+// ```
+
+// Is example mein `Array.of` ne har baar ek naya array banaya aur diye gaye values ko usmein rakha. Ye method useful ho sakta hai jab aap chahte hain ki aapke pass hamesha ek array ho, chahe aapke pass ek value ho ya multiple values ho.
+
+// -----------------------------------------
+// -----------------------------------------
+// -----------------------------------------
+// -----------------------------------------
+// -----------------------------------------
+// -----------------------------------------
+// -----------------------------------------
+// -----------------------------------------
+// -----------------------------------------
