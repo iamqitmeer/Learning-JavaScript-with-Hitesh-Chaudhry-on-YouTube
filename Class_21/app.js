@@ -1,256 +1,127 @@
-// How does javascript execute code + call stack
+// JavaScript code browser mein runtime mein kaise execute hota hai, isme kuch steps hote hain:
+
+// 1. **HTML Document:**
+//    Sabse pehle, ek HTML document create karo jisme `<script>` tag ke andar ya external JavaScript file ke through JavaScript code include kiya jaye.
 
-/*
+//    Example using inline JavaScript:
+//    ```html
+//    <!DOCTYPE html>
+//    <html lang="en">
+//    <head>
+//        <meta charset="UTF-8">
+//        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//        <title>JavaScript Runtime</title>
+//    </head>
+//    <body>
+//        <script>
+//            // Your JavaScript code goes here
+//            console.log("Hello, world!");
+//        </script>
+//    </body>
+//    </html>
+//    ```
 
-JavaScript code ko execute karne ka tareeka web browsers mein alag hota hai aur Node.js environment mein alag hota hai. Main aapko dono cases mein se ek example provide karunga.
+//    Example using external JavaScript file:
+//    ```html
+//    <!DOCTYPE html>
+//    <html lang="en">
+//    <head>
+//        <meta charset="UTF-8">
+//        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//        <title>JavaScript Runtime</title>
+//        <script src="your_script.js"></script>
+//    </head>
+//    <body>
+//        <!-- Your HTML content -->
+//    </body>
+//    </html>
+//    ```
 
-**1. Web Browser mein:**
+// 2. **Browser Load:**
+//    Jab aap apne HTML document ko browser mein open karte hain, browser HTML aur associated resources ko load karta hai.
 
-JavaScript code ko web browser mein execute karne ke liye aapko HTML document mein `<script>` tag ka istemal karna hoga. Yeh tag browser ko batata hai ki yeh area JavaScript code contain karta hai.
+// 3. **JavaScript Execution:**
+//    Jab browser JavaScript code se milta hai, woh use execute karta hai. Agar code `<script>` tag ke andar hai toh wo direct execute hota hai. Agar external file se link kiya gaya hai toh browser use download karta hai aur execute karta hai.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Example</title>
-</head>
-<body>
+//    Example JavaScript code:
+//    ```javascript
+//    // your_script.js
+//    console.log("Hello, world!");
+//    ```
 
-    <h1>JavaScript Example</h1>
+// 4. **Output:**
+//    JavaScript code ke output ko aap developer tools ke console mein dekh sakte hain. Iske liye aap browser ke inspect mode mein ja kar console tab par ja sakte hain.
 
-    <!-- JavaScript code -->
-    <script>
-        // Aapka JavaScript code yahan likhein
-        console.log("Hello, World!");
-    </script>
+// Yeh process runtime mein hota hai, kyunki JavaScript dynamically manipulate kar sakta hai DOM (Document Object Model) aur interact kar sakta hai user ke actions ke sath.
 
-</body>
-</html>
-```
 
-Is HTML document mein, `<script>` tag ke andar likha gaya JavaScript code (`console.log("Hello, World!");`) browser ke taraf se execute hoga. Aap is file ko ek .html extension ke file mein save karke apne web browser mein open kar sakte hain.
+// -----------------------------------------------------------------------
+// -----------------------------------------------------------------------
+// -----------------------------------------------------------------------
 
-**2. Node.js mein:**
 
-Agar aap Node.js environment mein JavaScript code execute karna chahte hain, toh aapko Node.js install karna hoga. Yeh ek server-side runtime environment hai.
+// JavaScript ek client-side programming language hai, jo primarily browser mein run hota hai. Jab aap ek web page open karte hain, HTML aur CSS se saath mein JavaScript bhi download hota hai. JavaScript parde ke peeche kaise kaam karta hai, iska process niche diye gaye steps mein hota hai:
 
-1. Pehle aapko [Node.js download](https://nodejs.org/) karna hoga aur apne system mein install karna hoga.
+// 1. **Code Download:**
+//    Browser HTML document parse karta hai aur jab woh `<script>` tag ya external JavaScript file se milta hai, toh use download karta hai.
 
-2. Ab, ek text editor mein apna JavaScript code likhein. For example, ek file create karein jiska naam `app.js` ho, aur usmein neeche diye gaye code ko likhein:
+// 2. **Execution Context:**
+//    Jab JavaScript code execute hota hai, ek execution context create hota hai. Yeh context function scope, variables, objects, aur kuch aur important details ko store karta hai.
 
-```javascript
-// app.js
-console.log("Hello, World!");
-```
+// 3. **Execution of Code:**
+//    JavaScript code line by line execute hota hai. Agar koi function call hota hai toh ek naya execution context create hota hai us function ke liye. Functions, loops, conditions, etc., sab execute hote hain.
 
-3. Terminal ya command prompt open karein, aur apne code ke file ka directory mein navigate karein.
+// 4. **DOM Manipulation:**
+//    JavaScript ka ek important aspect hai DOM (Document Object Model) manipulation. JavaScript ke through, aap HTML aur CSS ko dynamically manipulate kar sakte hain. For example, elements ko add, remove, ya modify kar sakte hain, events ko handle kar sakte hain, etc.
 
-4. Terminal mein yeh command likhein:
+// 5. **Asynchronous Operations:**
+//    JavaScript asynchronous programming support karta hai. Iska mtlb hai ki kuch operations background mein chal sakti hain aur user ke interaction ke liye wait nahi karna padta. Ismein `setTimeout`, `setInterval`, aur AJAX calls jaise concepts shamil hain.
 
-```bash
-node app.js
-```
+// 6. **Event Handling:**
+//    JavaScript event-driven programming language hai. Iska mtlb hai ki woh user ke actions ka wait karta hai aur jab koi event occur hota hai (jaise ki button click, mouse hover, etc.), toh associated code execute hota hai.
 
-Yeh command aapke JavaScript code ko execute karega, aur output `Hello, World!` terminal mein dikhai dega.
+// 7. **AJAX (Asynchronous JavaScript and XML):**
+//    AJAX allows asynchronous communication with the server. Iske through, aap server se data asynchronously retrieve kar sakte hain bina puri page ko reload kiye.
 
-Umeed hai ki yeh samajh aaya ki JavaScript code kaise execute hota hai web browser mein aur Node.js environment mein.
+// 8. **Security:**
+//    JavaScript is sandboxed, meaning it has limitations on accessing resources outside of its environment for security reasons. This prevents malicious activities from JavaScript code.
 
-----------------------------------------------------------------
-----------------------------------------------------------------
-----------------------------------------------------------------
-----------------------------------------------------------------
+// Yeh process collectively JavaScript ko ek powerful language banata hai, jiska use interactive web pages banane mein hota hai. Iske through, aap user ke actions ka response de sakte hain, dynamic content create kar sakte hain, aur user experience ko enhance kar sakte hain.
 
+// -----------------------------------------------------------------------
+// -----------------------------------------------------------------------
+// -----------------------------------------------------------------------
 
-Bilkul, main step-by-step taur par samjha raha hoon.
+// JavaScript ke execution ke baare mein interviewer ke perspective se, kuch key points hain jo aap discuss kar sakte hain:
 
-**Web Browser mein JavaScript code execute karna:**
+// 1. **Single-Threaded Nature:**
+//    JavaScript single-threaded hota hai, mtlb ek hi thread mein code execute hota hai. Iska mtlb hai ki ek samay mein ek hi task ho sakta hai. Isme ek main thread hota hai jo code ko line by line execute karta hai.
 
-1. **HTML Document Create Karein:**
-   Sabse pehle, aapko ek HTML document create karna hoga. Is document mein aap JavaScript code include karenge.
+// 2. **Event Loop:**
+//    Event Loop JavaScript ka ek important concept hai. Event Loop constantly check karta hai ki koi new event toh nahi hua hai jaise ki user input, timer completion, ya network response. Event Loop ensure karta hai ki single thread par kaam karte hue bhi asynchronous tasks ko efficiently manage kiya ja sake.
 
-   ```html
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>JavaScript Example</title>
-   </head>
-   <body>
+// 3. **Callback Queue:**
+//    Callback queue ek mechanism hai jisse async tasks ko manage kiya jata hai. Jab koi asynchronous task complete hota hai, woh callback queue mein chala jata hai aur jab event loop empty hota hai, toh woh task execute hota hai.
 
-       <h1>JavaScript Example</h1>
+// 4. **Promises:**
+//    Promises ek pattern hain jisse aap asynchronous code ko manage kar sakte hain. Ye ek standardized way hai async operations handle karne ka, jisse callback hell se bacha ja sake.
 
-       <!-- JavaScript code -->
-       <script>
-           // Aapka JavaScript code yahan likhein
-           console.log("Hello, World!");
-       </script>
+// 5. **Hoisting:**
+//    JavaScript mein hoisting hota hai, jisse variables aur functions ke declarations ho jate hain before code execution. Lekin, values assign hone se pehle, undefined rehta hai.
 
-   </body>
-   </html>
-   ```
+// 6. **Closures:**
+//    Closures ka concept interview mein common hota hai. Closures allow functions to access variables from their outer scope even after the outer function has finished executing. Yeh powerful feature hai aur code maintainability mein help karta hai.
 
-2. **Web Browser Mein Open Karein:**
-   Is HTML document ko ek .html extension ke file mein save karein, aur usse apne web browser mein open karein. Aap dekhein ge ki "Hello, World!" console mein dikhai dega.
+// 7. **Scope Chain:**
+//    JavaScript mein scope ka chain hota hai, jisse variables ko access kiya ja sakta hai. Agar koi variable local scope mein nahi milta, toh uski search outer scopes mein hoti hai.
 
-**Node.js mein JavaScript code execute karna:**
+// 8. **Memory Management:**
+//    JavaScript automatic garbage collection ka use karta hai. Unused variables aur objects ko identify karke, woh memory se free kar deta hai.
 
-1. **Node.js Install Karein:**
-   Node.js ko [download](https://nodejs.org/) karein aur apne system mein install karein.
+// 9. **Web APIs:**
+//    Browser environment ke andar, JavaScript Web APIs ke sath interact karta hai jaise ki DOM APIs, AJAX, setTimeout, setInterval, etc. In APIs se aap asynchronous tasks manage kar sakte hain.
 
-2. **Text Editor Mein JavaScript Code Likhein:**
-   Ek text editor ka istemal karke apna JavaScript code likhein. For example, ek file create karein jiska naam `app.js` ho, aur usmein neeche diye gaye code ko likhein:
+// 10. **Error Handling:**
+//     JavaScript mein try-catch blocks ka use errors handle karne ke liye hota hai. Proper error handling code likhna aur unexpected errors ko identify karna important hai.
 
-   ```javascript
-   // app.js
-   console.log("Hello, World!");
-   ```
-
-3. **Terminal Mein Command Likhein:**
-   Terminal ya command prompt ko open karein, aur apne code ke file ka directory mein navigate karein.
-
-4. **Node.js Se Code Execute Karein:**
-   Terminal mein yeh command likhein:
-
-   ```bash
-   node app.js
-   ```
-
-   Yeh command aapke JavaScript code ko execute karega, aur output `Hello, World!` terminal mein dikhai dega.
-
-Umeed hai ki yeh aapko ache se samajh aaya hoga ki JavaScript code kaise execute hota hai web browser mein aur Node.js environment mein. Agar aapko koi specific point samajh nahin aaya, toh poochhein!
-
-*/
-
-// Javascript Excecution Context
-// Matlab Koi Bhi File Banayi usko Javascript Run kaise kreGi? run krne ke liye Javascript Hamare Programm ko 2 Phase. me run krti He
-
-// Example Ye Code He
-
-let hamaraNaam = {
-    name : "Qitmeer raza",
-}
-
-// 1 - Sab se Pehle Hamare Paas Global Excecution Context Banta he. is this ke andar rakh diya jata he.
-//  2- Function / Functional Excecution Context
-// 3 - Eval Excecution Context
-
-// run krne ke liye Javascript Hamare Programm ko 2 Phase. me run krti He
-// 1 - Memory Creation Phase / Creation Phase
-// Momory Creation Phase me Jo bhi Hamare Varieble Hote he. inke liye Space elocate hota he. excecute nhi hote sirf space elocate hota he.
-
-/*
-
-JavaScript me memory creation phase primarily execution context ke tahat hota hai. Execution context ek internal data structure hota hai, jise JavaScript engine create karta hai jab koi script run hoti hai. Ye ek two-phase process hota hai: Memory Creation Phase aur Code Execution Phase.
-
-1. **Memory Creation Phase:**
-   - **Global Object Creation:** Global object (window in the case of browsers) aur uske associated properties create hote hain.
-   - **'this' ka value set karna:** 'this' keyword ka value determine hota hai. Global context mein 'this' global object ko refer karta hai.
-   - **Outer Environment ka setup karna:** Lexical scoping ke basis par, current code ka context determine hota hai.
-
-2. **Code Execution Phase:**
-   - **Variable Object Creation:** Function ke case mein, ek variable object create hota hai jise function ke scope mein use hone wale variables ke liye reserve kiya jata hai.
-   - **Scope Chain Determination:** Lexical scoping principles ke basis par scope chain decide hota hai.
-   - **'this' ka actual value set karna:** Function ke context mein 'this' ka actual value set hota hai.
-   - **Code Execution:** Ab actual code ko line by line execute kiya jata hai.
-
-Example:
-
-console.log(a); // undefined
-let a = 5;
-console.log(a); // 5
-
-Memory Creation Phase mein, variable `a` memory mein hoisting ke karan undefined ho jayega. Code Execution Phase mein, `a` ko 5 assign kiya jayega aur doosri console.log statement mein 5 print hoga.
-
-JavaScript me memory creation phase aur code execution phase asynchronous taur par hota hai. Isiliye, hoisting ke wajah se variables aur functions ko code se pehle bhi access kiya ja sakta hai, lekin unki values undefined hoti hain jab tak execution code tak nahi pahunchta.
-*/
-
-/*
-
-Certainly! Yahan ek chhota sa JavaScript code hai:
-
-```javascript
-var x = 10;
-
-function addNumbers(a, b) {
-  return a + b;
-}
-
-var result = addNumbers(x, 5);
-
-console.log(result);
-```
-
-Ab maine is code ko steps mein break down kiya hai, jise execution ke waqt kaise interpret kiya jayega:
-
-1. **Memory Creation Phase:**
-   - Global context ke liye memory create hogi.
-   - `x` variable ke liye memory allocate hogi aur uski initial value `undefined` hogi.
-   - `addNumbers` function ke liye memory allocate hogi, lekin function body abhi tak execute nahi hua hai.
-   - `result` variable ke liye memory allocate hogi aur uski initial value `undefined` hogi.
-
-2. **Code Execution Phase:**
-   - `var x = 10;` execute hoga. Ab `x` ki value 10 hogi.
-   - `function addNumbers(a, b)` declare hua hai, lekin abhi execute nahi hua.
-   - `var result = addNumbers(x, 5);` execute hoga. `addNumbers` function ka call hoga, aur isme `x` ki value 10, `5` pass hoga. `addNumbers` function 10 + 5 karega aur result variable mein store hoga.
-   - `console.log(result);` execute hoga. `result` ki value, jo ab 15 hai, console par print hogi.
-
-3. **Output:**
-   ```
-   15
-   ```
-
-Is tarah se, memory creation phase mein variables aur functions ki initial setup hoti hai, aur phir code execution phase mein actual code run hota hai. Execution context ke hisab se variables ki values set hoti hain aur functions call hoti hain.
-
-*/
-
-// 2 - Excecution Phase
-
-/*
-
-JavaScript ka execution phase, JavaScript code ko interpret aur execute karne ka process hai. Jab aap apne browser mein koi web page open karte hain, to browser JavaScript code ko execute karta hai. Is process ko samajhne ke liye, ek basic JavaScript program ke execution phase ka breakdown diya gaya hai:
-
-1. **Source Code:**
-   - Pehle, aap JavaScript code likhte hain. Ye code aapke HTML document ke `<script>` tags ke andar ya external JavaScript file mein ho sakta hai.
-
-     ```javascript
-     // Example JavaScript code
-     console.log("Hello, World!");
-     ```
-
-2. **Tokenization and Lexical Analysis:**
-   - Is phase mein, JavaScript engine code ko tokens mein divide karta hai. Tokens JavaScript ke smallest building blocks hote hain, jaise keywords, identifiers, operators, etc.
-
-3. **Syntax Parsing:**
-   - Ab, engine syntax ko analyze karta hai, yani ki code ka structure check karta hai. Ye phase syntax errors ko detect karta hai.
-
-4. **AST (Abstract Syntax Tree) Creation:**
-   - JavaScript engine ek Abstract Syntax Tree (AST) create karta hai. AST tree ka representation hai jo code ka structure dikhata hai. Ye tree, code ke different parts ke relationships ko darust dikhata hai.
-
-5. **Execution Context Creation:**
-   - Jab code execute hota hai, to JavaScript engine ek execution context create karta hai. Execution context me variables, functions, scope, this, etc., shamil hote hain. Har function call ya block of code ke liye ek naya execution context banta hai.
-
-6. **Hoisting:**
-   - Hoisting ka matlab hai ki JavaScript engine variable aur function declarations ko code ke shuruwat mein le aata hai. Lekin, inki values ko nahi. Isse, aap variable ko use kar sakte hain even before aapne use initialize kiya ho.
-
-     ```javascript
-     console.log(x); // undefined
-     var x = 5;
-     ```
-
-7. **Execution:**
-   - Ab, JavaScript engine code ko line by line execute karta hai. Variables ko initialize karta hai, functions ko call karta hai, aur output produce karta hai.
-
-     ```javascript
-     // Execution phase
-     console.log("Hello, World!"); // Output: Hello, World!
-     ```
-
-8. **Garbage Collection:**
-   - Last mein, engine unused variables ya objects ko identify karta hai aur unhe memory se release kar deta hai.
-
-Yeh steps code execution ke general process ko represent karte hain. Har step mein, engine checks karta hai ki code kis tarah se execute hoga aur kaise interpret kiya jayega.
-
-*/
+// In points ko cover karke aap interviewer ko dikha sakte hain ki aap JavaScript execution process aur concepts ko achhe se samajhte hain.
