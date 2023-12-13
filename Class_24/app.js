@@ -76,6 +76,7 @@ const muslimHeroes = [
   "Tariq ibn Ziyad"
 ];
 
+
 // let i = 0
 // while (i < muslimHeroes.length) {
 //   document.write(`${muslimHeroes[i]} <br>`);
