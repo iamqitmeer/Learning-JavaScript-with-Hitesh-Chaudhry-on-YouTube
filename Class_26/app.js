@@ -2,7 +2,6 @@
 // ---------------------------------------------------
 // ---------------------------------------------------
 
-
 let muslimHeroes = [
   "Salahuddin Ayyubi",
   "Malala Yousafzai",
@@ -54,6 +53,23 @@ let muslimHeroes = [
 
 // Aap apne use case ke according in parameters ka istemal kar sakte hain ya unme se kuch ko ignore bhi kar sakte hain, agar aapko unki zarurat nahi hoti.
 
+// muslimHeroes.forEach((item) => {
+//   console.log(item);
+// });
+// const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const newNum = myNums.filter((num) => {
+//   return num > 4;
+// });
+
+// const neewnumss = []
+// myNums.forEach((i)=>{
+// if (i > 4) {
+//   neewnumss.push(i)
+// }
+// })
+
+// console.log(neewnumss);
+
 // ---------------------------------------------------
 // ---------------------------------------------------
 // ---------------------------------------------------
@@ -89,14 +105,12 @@ let muslimHeroes = [
 
 // Is example mein, `filter` method ka use kiya gaya hai to odd numbers ko select karne ke liye. Callback function har element par lagatar apply hoti hai, aur jo elements condition ko satisfy karte hain, woh naye array mein shamil ho jaate hain.
 
-
 // let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // let secArr = num.filter((number) => {
 //   return number <= 5;
 // });
 
 // console.log(secArr);
-
 
 // ---------------------------------------------------
 // ---------------------------------------------------
@@ -149,7 +163,7 @@ let muslimHeroes = [
 // Yeh ek example hai:
 
 // ```javascript
-// // Original array
+// Original array
 // var numbers = [1, 2, 3, 4, 5];
 
 // // Map function to square each element
@@ -157,7 +171,7 @@ let muslimHeroes = [
 //   return num * num;
 // });
 
-// // Output: [1, 4, 9, 16, 25]
+// // // Output: [1, 4, 9, 16, 25]
 // console.log(squaredNumbers);
 // ```
 
@@ -171,9 +185,142 @@ let muslimHeroes = [
 
 // `map` method bahut hi flexible hai aur aap ise alag-alag tarike se upayog kar sakte hain, depend karta hai ki aap kis tarah ke transformation karna chahte hain.
 
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let mynewNum = numbers.map((i) => i+10)
+// console.log(mynewNum);
+
+// let newNums = numbers
+//   .map((num) => num * 10)
+//   .map((i) => i + 1)
+//   .map((i) => i + 4)
+//   .filter((num) => num > 50);
+
+// console.log(newNums);
 // ---------------------------------------------------
 // ---------------------------------------------------
 // ---------------------------------------------------
 
+// Solve Question
+
+const books = [
+  { title: "Book One", genre: "Fiction", publish: 1981, edition: 2004 },
+  { title: "Book Two", genre: "Non-Fiction", publish: 1992, edition: 2008 },
+  { title: "Book Three", genre: "History", publish: 1999, edition: 2007 },
+  { title: "Book Four", genre: "Non-Fiction", publish: 1989, edition: 2010 },
+  { title: "Book Five", genre: "Science", publish: 2009, edition: 2014 },
+  { title: "Book Six", genre: "Fiction", publish: 1987, edition: 2010 },
+  { title: "Book Seven", genre: "History", publish: 1986, edition: 1996 },
+  { title: "Book Eight", genre: "Science", publish: 2011, edition: 2016 },
+  { title: "Book Nine", genre: "Non-Fiction", publish: 1981, edition: 1989 },
+];
+
+// Yaha pe mjhe filter keyword ka use krke wo books chahiye jiska genre history he
+
+// const userBooks = books.filter((bk) => {
+//   return bk.genre === 'History'
+// });
+// console.log(userBooks);
+
+// Again
+// Yaha pe me chahta hoo ke wo books lao jo publish hui he 2000 ke baad OR us book ka genre history hona chahiye
+
+// const userBooks = books.filter((bk) => {
+//   return bk.publish >= 1995 && bk.genre === 'History'
+
+// });
+// console.log(userBooks);
+
+// ---------------------------------------------------
+// ---------------------------------------------------
+// ---------------------------------------------------
+
+// Reduce In Javascript
+// ---------------------------------------------------
+
+// `reduce` ek JavaScript array method hai jo ek single value ko generate karne ke liye array ke har element par ek function apply karta hai. Yeh method initial value, accumulator, aur current value ka use karta hai.
+
+// Yeh hai `reduce` ki basic syntax:
+
+// ```javascript
+// array.reduce(function(accumulator, currentValue, currentIndex, array) {
+// logic to combine accumulator and currentValue
+// }, initialValue);
+// ```
+
+// - `accumulator`: Accumulator variable jo values ko accumulate karta hai.
+// - `currentValue`: Current element of the array.
+// - `currentIndex`: Optional, current element ka index.
+// - `array`: Optional, array jispar reduce apply ho raha hai.
+// - `initialValue`: Optional, reduce ke start me accumulator ki initial value.
+
+// Yeh method har iteration me accumulator ko update karta hai. Isse final result milta hai, jo single value hota hai.
+
+// Example:
+
+// ```javascript
+// var numbers = [1, 2, 3, 4, 5];
+
+// var sum = numbers.reduce(function(accumulator, currentValue) {
+//   return accumulator + currentValue;
+// }, 0);
+
+// console.log(sum); // Output: 15
+// ```
+
+// Is example me, `reduce` function ne array ke sabhi elements ko add karke ek sum generate kiya.
+
+// Aap `reduce` ko complex operations ke liye bhi use kar sakte hain, jaise ki array ke elements ka multiplication, filtering, ya koi aur custom logic. Isse code concise aur readable ho jata hai.
+
+// let arr = [1, 2, 3, 4, 5];
+// let newArr = arr.reduce((i, c) => {
+//   console.log(`Acc Val is ${i} & Current Val is ${c}`);
+//   return i + c;
+// }, 0);
+// console.log(newArr);
+
+// let numbers = [-3, -5, -1, -7, -2, -0, -4];
+
+// let smallestPositive = numbers.reduce((smallest, current) => {
+//   if (current > 0 && (current < smallest || smallest <= 0)) {
+//     return current;
+//   }
+//   return smallest;
+// }, Infinity);
+
+// if (smallestPositive <= 0 || smallestPositive === Infinity) {
+//   console.log("No positive number found");
+// } else {
+//   console.log("Smallest positive number:", smallestPositive);
+// }
+
+// let strings = ["apple", "banana", "orange", "grape"];
+// let totalLength = strings.reduce((smallest, current) => {
+//   return current.length;
+// }, 0);
+
+// if (strings.length === 0) {
+//   console.log("Array is empty");
+// } else {
+//   console.log("Total length of strings:", totalLength);
+// }
+
+
+var students = [
+  { name: "Alice", marks: 85 },
+  { name: "Bob", marks: 90 },
+  { name: "Charlie", marks: 78 },
+  // ... more students
+];
+
+var totalMarks = students.reduce(function(sum, student) {
+  return sum + student.marks;
+}, 0);
+
+if (students.length === 0) {
+  console.log("No students found");
+} else {
+  console.log("Total marks of all students:", totalMarks);
+}
 
 // ---------------------------------------------------
