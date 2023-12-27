@@ -1,4 +1,4 @@
-// DOM introduction in javascript
+// DOM introduction in Javascript
 // DOM -- Document Object Model
 // -----------------------------------------------------------
 // -----------------------------------------------------------
