@@ -1,5 +1,6 @@
 // Control flow in javascript in 1 shot
 
+
 // JavaScript me control flow, program ke execution order ko control karne ka tareeka hai. Yani ki, ye batata hai ki code kis order mein run karega. JavaScript me control flow ko manage karne ke liye kuch key concepts hote hain:
 
 // 1. **Sequential Execution:**
