@@ -82,7 +82,7 @@ console.log(mySplitVarieble.split('-')); // iska matlab smjhne wala he
 // let words = sentence.split(" ");
 
 // console.log(words);
-// // Output: ["Hello,", "how", "are", "you", "doing", "today?"]
+// Output: ["Hello,", "how", "are", "you", "doing", "today?"]
 // ```
 
 // Is example mein:
