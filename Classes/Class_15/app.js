@@ -2,7 +2,7 @@
 
 // JavaScript mein functions ek important concept hain jo code ko organize aur reusable banane mein madad karte hain. Function ek set of statements hota hai jo ek specific task ko perform karta hai. Jab aap ek function define karte hain, aap usse baar-baar call kar sakte hain bina uske code ko dohrane ki zarurat ke.
 
-// Example :-
+// Example :---
 
 // console.log("Q");
 // console.log("I");
