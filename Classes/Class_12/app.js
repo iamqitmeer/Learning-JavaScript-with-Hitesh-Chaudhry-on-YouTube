@@ -7,6 +7,7 @@
 
 // means mene eik single array diclear kiya " ourHeroes " ab ham us ke andar multiple collection of items ( Multiple Heroes ke naam enter krSkta hoo ) store krskte he
 
+
 // e.g.
 
 // let muslimHeroes = [
