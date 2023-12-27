@@ -2,9 +2,9 @@
 
 // "While loop" ek programming concept hai jo ek block of code ko execute karta hai jab tak specified condition true hoti hai. Ye loop tab tak chalta hai jab tak condition false nahi hojati. While loop ka basic syntax kuch is tarah hota hai:
 
-//javascript
+// javascript
 // while (condition) {
-//   // Code to be executed as long as the condition is true
+  // Code to be executed as long as the condition is true
 // }
 
 // Yahan "condition" ek boolean expression hoti hai. Jab ye condition true hoti hai, tab loop ke andar ka code execute hota hai. Jab condition false hojati hai, tab loop se bahar nikal jata hai aur program agla statement execute karta hai.
