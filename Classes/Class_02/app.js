@@ -3,8 +3,6 @@ alert('Hello World') // we are using node js, not browser
 console.log(
     'hello world'); // code redability should be high
 
-
-
 // Datatypes in Javascript
 let name = "Qitmeer Raza" // - string 
 let age = 16 // - number
