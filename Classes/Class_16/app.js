@@ -1,4 +1,4 @@
-// Functions with objects and array in javascript
+// Functions with objects and array in javascript.
 
 // Let's Example - Ham eik Banarahe he Exommerce App Or Waha Hamare User Bohot zyada items Cart kr raha he hamare page ko un tamam items ko price ko add krKe batana he. problem ye he ke user add to cart krege bohot zyada items ko ab hame to nhi patana ke ye kitne item ko add krege ham kitne parameters de. ye problem bohot commmon h. iska solution h.
 
