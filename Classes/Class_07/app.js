@@ -1,12 +1,9 @@
 // Data types of javascript summary
 // -----------------------------------------------------
 
-
 // 2 Types Of DataType
 
 // 1 --- Premitive
-
-// 7 Type
 // --> String --> // "" , 'myName'
 // --> Null --> Is ka matlab he ke "Empty" (خالی)
 // --> Boolean --> True/False
@@ -39,7 +36,7 @@
 
 // -----------------------------------------------
 
-// Q. JavaScript Dynamically Type Language he Statically Type Language He?
+// Q. JavaScript Dynamically Type Language he Ya Statically Type Language He?
 
 // JavaScript ek dynamically typed language hai, matlab ki variable types runtime par decide hote hain, aur aapko variable ka data type explicitly declare karne ki zarurat nahi hoti. JavaScript mein aap ek variable ko alag-alag types ke values assign kar sakte hain bina kisi problem ke.
 

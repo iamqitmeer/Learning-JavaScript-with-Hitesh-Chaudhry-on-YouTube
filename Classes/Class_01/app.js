@@ -17,7 +17,6 @@ console.table([myFather, myFriends, myName])
 
 // Undefined -- agar javascript me ham varieble banake chor dete he iski koi value nhi dete to javascript use undefined manti h
 
-
 // Theory --- Let, const and var ki kahani | chai aur #javascript
 
 // Let, const, aur var teeno JavaScript mein variables declare karne ke liye istemal hoti hain, lekin in teeno mein kuch farq hota hai.
