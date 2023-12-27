@@ -1,7 +1,7 @@
 // Objects in depth in javascript
 
 // Objects kya Hota he?
-// -----------------------------------
+// ---------------------------------------------
 // JavaScript me, ek "object" ek complex data type hota hai jo key-value pairs (properties) ka collection hota hai. Har key ek unique identifier hoti hai, aur unke corresponding values un keys ke saath associated hote hain. Objects JavaScript ka ek fundamental concept hai, aur ye language ke bahut se features ko support karta hai.
 
 // JavaScript me, objects bahut versatile hote hain aur aap unhe manipulate kar sakte hain, unme new properties add kar sakte hain, existing properties ko update kar sakte hain, aur unke values ko access karke use kar sakte hain.
