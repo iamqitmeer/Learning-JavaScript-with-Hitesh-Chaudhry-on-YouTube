@@ -1,7 +1,6 @@
 // THIS and arrow function in javascript
 
 /*
-
 Arrow functions JavaScript mein ek concise syntax provide karte hain traditional function expressions ke liye. Ye syntax ES6 (ECMAScript 2015) mein introduce hua tha. Arrow functions ko anonymous functions bhi kehte hain, kyunki inme function ka naam nahi hota.
 
 Yahan ek basic arrow function ka example hai:
