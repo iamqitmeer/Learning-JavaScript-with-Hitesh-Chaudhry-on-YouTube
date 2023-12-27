@@ -1,6 +1,6 @@
 // JavaScript code browser mein runtime mein kaise execute hota hai, isme kuch steps hote hain:
 
-// 1. **HTML Document:**
+// 1. HTML Document:
 //    Sabse pehle, ek HTML document create karo jisme `<script>` tag ke andar ya external JavaScript file ke through JavaScript code include kiya jaye.
 
 //    Example using inline JavaScript:
