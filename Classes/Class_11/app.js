@@ -4,6 +4,7 @@
 // Date In Javascript
 
 let myDate = new Date();
+console.log(Date());
 // console.log(myDate); // is ka output bilkul bhi readable nhii he
 // Try Krte he isko string me convert krne ka
 // console.log(myDate.toString()); // is ka output bhi same he upar wale se
@@ -59,3 +60,65 @@ console.log(
 
 // -----------------------
 // Time In Javascript
+
+// JavaScript mein time kaam karne ka tareeka kaafi straightforward hai. Aap JavaScript mein time ke saath kaam karne ke liye kuch built-in objects ka istemal kar sakte hain. Yahan kuch basic concepts hain:
+
+// 1. **Date Object:**
+//    JavaScript mein `Date` object ka istemal current date aur time ko represent karne ke liye hota hai. Aap is object ko create karke current date aur time ko access kar sakte hain.
+
+//    ```javascript
+//    Current date and time
+//    var currentDate = new Date();
+//    console.log(currentDate);
+//    ```
+
+// 2. Date Methods:
+//    `Date` object ke saath kuch useful methods hote hain jinse aap specific date aur time ko access kar sakte hain.
+
+//    ```javascript
+//    var currentDate = new Date();
+
+//    // Get individual components
+//    var year = currentDate.getFullYear();
+//    var month = currentDate.getMonth(); // Month starts from 0 (0-11)
+//    var day = currentDate.getDate();
+//    var hours = currentDate.getHours();
+//    var minutes = currentDate.getMinutes();
+//    var seconds = currentDate.getSeconds();
+
+//    console.log(year, month, day, hours, minutes, seconds);
+//    ```
+
+// 3. Set Methods:
+//    `Date` object ke saath aap date aur time ko set karne ke liye bhi methods ka istemal kar sakte hain.
+
+//    ```javascript
+//    var futureDate = new Date();
+   
+//    // Set a future date (year, month, day, hours, minutes, seconds)
+//    futureDate.setFullYear(2023);
+//    futureDate.setMonth(11); // December (0-11)
+//    futureDate.setDate(31);
+//    futureDate.setHours(23);
+//    futureDate.setMinutes(59);
+//    futureDate.setSeconds(59);
+
+//    console.log(futureDate);
+//    ```
+
+// 4. **Interval and Timeout:**
+//    `setInterval` aur `setTimeout` functions ka istemal karke aap specific intervals par code ko execute kar sakte hain.
+
+//    ```javascript
+//    // setInterval example
+//    setInterval(function() {
+//        console.log("This will be logged every 1000 milliseconds");
+//    }, 1000);
+
+//    // setTimeout example
+//    setTimeout(function() {
+//        console.log("This will be logged after 3000 milliseconds");
+//    }, 3000);
+//    ```
+
+// Ye basic concepts hain jo JavaScript mein time ke saath kaam karne ke liye istemal hote hain. Iske alawa, kai third-party libraries bhi available hain jo time aur date ke advanced manipulations ko facilitate karte hain.
