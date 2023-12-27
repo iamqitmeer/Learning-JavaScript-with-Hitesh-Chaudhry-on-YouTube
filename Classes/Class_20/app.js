@@ -1,12 +1,12 @@
 // Immediately Invoked Function Expressions - ( IIFE )
-// ------------------------------------------------------
+// --------------------------------------------------------
 
 // "Immediately Invoked Function Expression" (IIFE) ek JavaScript concept hai jisme ek function define kiya jata hai aur phir use immediately call (invoke) bhi kiya jata hai. IIFE ka mtlb hai ki ye function define hota hai aur foran uski execution bhi ho jati hai. Iska mtlb variables ko local scope me rakhna aur global scope pollution se bachna hota hai.
 
 // Yahan ek simple example hai IIFE ka:
 
 // (function() {
-//   // IIFE ke andar ka code
+  // IIFE ke andar ka code
 //   console.log("I am inside an IIFE!");
 // })();
 
