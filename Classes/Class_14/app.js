@@ -12,7 +12,7 @@ JavaScript me object de-structuring ek technique hai jise hum object ke properti
 Yahan ek simple example hai:
 
 ```javascript
-// Object definition
+Object definition
 const person = {
   firstName: 'John',
   lastName: 'Doe',
@@ -23,7 +23,7 @@ const person = {
   }
 };
 
-// Object de-structuring
+Object de-structuring
 const { firstName, lastName, age, address: { city, country } } = person;
 
 // Use the variables
